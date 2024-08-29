@@ -34,8 +34,6 @@ while n != 6:
                 if i.name == name:
                     print(i.__dict__)
                     print("\n")
-                    for vehicle in i.vehicles:
-                        print(vehicle)
 
     if n == 3:
         name = input("Enter customer name : ")
@@ -44,6 +42,8 @@ while n != 6:
                 if i.name == name:
                     for j in i.vehicles:
                         print(j.__dict__)
+                    else:
+                        print("Vehicle not found")
 
     if n == 4:
         name = input("Enter customer name : ")
@@ -99,7 +99,11 @@ while n != 6:
                             # number = i.vehicles[indexNumber]
                             i.sellVehicle(i.vehicles[indexNumber])
                             print("Sold Successfully")
+                            print("Remaining vehicles : ")
                             for k in i.vehicles:
                                 print(k.__dict__)
+                        else:
+                            print("Vehicle not found")
+                    break
 
                     
