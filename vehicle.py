@@ -11,14 +11,8 @@ class LigthMotorVehicle(Vehicle):
         self.type = type
         self.mileage = mileage
 
-    def __str__(self):
-        return f'{self.company}{self.manufacturingYear}{self.fuelCapacity}{self.noOfDoors}{self.type}{self.mileage}'
-
 class TransportVehicle(Vehicle):
     def __init__(self, company: str, manufacturingYear: int, fuelCapacity: int, carryingCapacity:int, type:str) -> None:
         super().__init__(company, manufacturingYear, fuelCapacity)
         self.carryingCapacity = carryingCapacity
         self.type = type
-
-    def __str__(self):
-        return f'{self.company}{self.manufacturingYear}{self.fuelCapacity}{self.carryingCapacity}{self.type}'
